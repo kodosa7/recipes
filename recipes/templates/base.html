@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' type='image/x-icon' %}">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Gabriela|Ropa+Sans&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.candy.js"></script>
+
+  </head>
+  <div class="module">
+    <header class="header">
+      <div class="page-header">
+        <h1><a href="/">My Recipe Book</a></h1>
+      </div>
+    </header>
+
+    <body class="body">
+      <div class="page-middle-box">
+        <div class="page-main">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </body>
+    <footer>
+      <p>
+        MyRecipeBook | Built on <a href="https://www.python.org/"><img src="/static/images/python-logo.png" width="75px" style="vertical-align:middle"></a> and <a href="https://www.djangoproject.com/"><img src="/static/images/django-logo.png" width="55px" style="vertical-align:middle"></a> | Powered by <a href="https://www.postgresql.org/"><img src="/static/images/postgres-logo.png" width="75px" style="vertical-align:middle"></a>
+      </p>
+    </footer>
+  </div>
+    <br>
+  </div>
+</html>

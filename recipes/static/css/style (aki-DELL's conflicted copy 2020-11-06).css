@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  background-color: #042131;
+  color: black;
+  background-image: url('/static/images/header-background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: 'Cataraman', sans-serif;
+  font-size: 1.2rem;
+}
+
+.page-header {
+  margin-top: 0;
+  padding: 10px 20px 10px 20px;
+  height: 150px;
+  text-align: center;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+  color: #fff;
+  font-size: 80pt;
+  text-decoration: none;
+}
+
+h1 {
+  color: #000;
+  font-family: 'Cabin', cursive;
+  font-size: 70px;
+}
+
+h2 {
+  color: #000;
+  font-family: 'Ropa sans', sans-serif;
+  font-size: 56px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Ropa sans', sans-serif;
+  font-size: 150%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+h4, h5 {
+  color: #000;
+  font-family: 'Catamaran', sans-serif;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.horizontal-line hr {
+  margin-left: 25%;
+  align-items: center;
+  width: 50%;
+}
+
+.page-main {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.page-main a {
+  text-decoration: none;
+  color: #000;
+}
+
+.page-main a:visited a:link {
+  text-decoration: none;
+  color: #000;
+}
+
+.page-main a:hover {
+  color: #d0d0d0;
+}
+
+.page-main p {
+  color: #e2e2e2;
+}
+
+.page-main h3 {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 16px;
+}
+
+.page-middle-box h2 {
+  text-align: left;
+}
+
+.page-middle-box {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f8f6ea;
+  /* background-color: rgba(0,0,0,0.2); */
+  height: 200%;
+  overflow: visible;
+  padding: 10px 0 25px 25px;
+}
+
+footer {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+  background-color: #0f0f0f;
+  color: #606060;
+  padding: 25px 0 22px 25px;
+}
+
+footer p {
+  font-size: 14px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+footer a {
+  color: #0066e2;
+  text-decoration: none;
+}
+
+.background-pic {
+  padding-bottom: 50px;
+}

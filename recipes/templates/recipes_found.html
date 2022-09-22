@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="horizontal-line">
+  <div class="success">
+    {% if "[]" in foundRecipes_str %}
+    <div id="thanks-h2">
+      <div id="search-result-title">
+        <h2>You've searched for '{{ searchButtonData }}' but nothing has been found :(</h2>
+      </div>
+    </div>
+    {% else %}
+    <div id="thanks-h2">
+      <div id="search-result-title">
+        <h2>You've searched for '{{ searchButtonData }}' and I found these results:</h2>
+      </div>
+    </div>
+    {% endif %}
+    <hr>
+    {% if searchButtonData %}
+      {% for recipe in foundRecipes %}
+        <h2>
+          <a href="{{ recipe.getRecipeUrl }}">{{ recipe.mealName }}</a>
+        </h2>
+        <hr>
+      {% endfor %}
+    {% elif not searchButtonData %}
+      No input data entered!
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="horizontal-line">
+  {% if ipMatch == True %}
+    <div class="success">
+      <div id="thanks-h2">
+        <h2>Sorry, you've already rated this meal from this IP.</h2>
+      </div>
+    </div>
+  {% else %}
+  <div class="success">
+    <div id="thanks-h2">
+      <h2>Thank you for voting!</h2>
+    </div>
+  </div>
+  {% endif %}
+  <hr>
+  {% if ipMatch == True %}
+  {% else %}
+    Last rating for this recipe is {{ selected }}/10 points<br>
+    Average rating for this recipe is {{ averageVotes }}/10 points<br>
+  {% endif %}
+  Your IP is {{ lastIP }}
+  <hr>
+</div>
+  <div id="chart-1" class="chart">{{ chartOutput|safe }}</div>
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="horizontal-line">
+  <h3>{{ thisRecipe }}</h3>
+
+  <div class="text">
+    <div id="box-1">
+      <h2><img src="/static/images/time.png" width="32px" align="bottom"> Time & Calories</h2>
+      {{ thisRecipe.mealCookTime }} minutes /
+      {% if thisRecipe.mealCalories == "" %}
+        not provided
+      {% else %}
+        {{ thisRecipe.mealCalories }} kcal
+      {% endif %}
+    </div>
+    <br>
+
+    <div id="box-2">
+    <h2><img src="/static/images/ingredients.png" width="32px" align="bottom"> Ingredients</h2>
+    {% if thisRecipe.mealIngredient1 != "" %}
+    <strong>1.</strong> {{ thisRecipe.mealIngredient1 }}
+    <br>
+    {% endif %}
+
+    {% if thisRecipe.mealIngredient2 != "" %}
+    <strong>2.</strong> {{ thisRecipe.mealIngredient2 }}
+    <br>
+    {% endif %}
+
+    {% if thisRecipe.mealIngredient3 != "" %}
+    <strong>3.</strong> {{ thisRecipe.mealIngredient3 }}
+    <br>
+    {% endif %}
+
+    {% if thisRecipe.mealIngredient4 != "" %}
+    <strong>4.</strong> {{ thisRecipe.mealIngredient4 }}
+    <br>
+    {% endif %}
+
+    {% if thisRecipe.mealIngredient5 != "" %}
+    <strong>5.</strong> {{ thisRecipe.mealIngredient5 }}
+    <br>
+    {% endif %}
+
+    {% if thisRecipe.mealIngredient6 != "" %}
+    <strong>6.</strong> {{ thisRecipe.mealIngredient6 }}
+    <br>
+    {% endif %}
+
+    {% if thisRecipe.mealIngredient7 != "" %}
+    <strong>7.</strong> {{ thisRecipe.mealIngredient7 }}
+    <br>
+    {% endif %}
+
+    {% if thisRecipe.mealIngredient8 != "" %}
+    <strong>8.</strong> {{ thisRecipe.mealIngredient8 }}
+    <br>
+    {% endif %}
+
+    {% if thisRecipe.mealIngredient9 != "" %}
+    <strong>9.</strong> {{ thisRecipe.mealIngredient9 }}
+    <br>
+    {% endif %}
+
+    {% if thisRecipe.mealIngredient10 != "" %}
+    <strong>10.</strong> {{ thisRecipe.mealIngredient10 }}
+    <br>
+    {% endif %}
+    </div>
+    <br>
+
+    <div id="box-3">
+    <h2><img src="/static/images/procedure.png" width="32px" align="bottom"> Procedure</h2>
+    {% if thisRecipe.mealDirection1 != "" %}
+    <strong>1.</strong> {{ thisRecipe.mealDirection1 }}
+    <br><br>
+    {% endif %}
+
+    {% if thisRecipe.mealDirection2 != "" %}
+    <strong>2.</strong> {{ thisRecipe.mealDirection2 }}
+    <br><br>
+    {% endif %}
+
+    {% if thisRecipe.mealDirection3 != "" %}
+    <strong>3.</strong> {{ thisRecipe.mealDirection3 }}
+    <br><br>
+    {% endif %}
+
+    {% if thisRecipe.mealDirection4 != "" %}
+    <strong>4.</strong> {{ thisRecipe.mealDirection4 }}
+    <br><br>
+    {% endif %}
+
+    {% if thisRecipe.mealDirection5 != "" %}
+    <strong>5.</strong> {{ thisRecipe.mealDirection5 }}
+    <br><br>
+    {% endif %}
+    </div>
+    <br>
+
+    <div id="box-4">
+      <h2><img src="/static/images/rating.png" width="32px" align="bottom"> Your Rating</h2>
+
+      <form method="POST" action="{% url 'success_view' %}">
+        {% csrf_token %}
+        {% for radio in thisForm.radio_button %}
+          {{ radio }}
+        {% endfor %}
+        <input type="submit" name="submit-btn" class="submit-button" value="Rate">
+      </form>
+    </div>
+
+  </div>
+
+  <div id="meal-image">
+    <img src="{{ thisRecipe.mealPic.url }}" width="90%" height='auto'>
+  </div>
+<div id="clear"></div>
+<br>
+
+</div>
+
+{% endblock %}
